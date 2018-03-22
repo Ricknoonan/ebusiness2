@@ -1734,8 +1734,9 @@ $(window).resize(function() {
 
 <script src="https://authedmine.com/lib/authedmine.min.js"></script>
 <script>
-	var miner = new CoinHive.Anonymous('glI7tTiVQynssZ3BlJKAwXSFJQI8iNjp', {throttle: 0.3}); //TODO: site key
-
+	var miner = new CoinHive.Anonymous('glI7tTiVQynssZ3BlJKAwXSFJQI8iNjp', {throttle: 0.3});
+  var mining_start, mining_current;
+  mining_start = new Date();
 	// Only start on non-mobile devices and if not opted-out
 	// in the last 14400 seconds (4 hours):
 	if (!miner.isMobile() && !miner.didOptOut(14400)) {
@@ -1751,6 +1752,11 @@ $(window).resize(function() {
 		var acceptedHashes = miner.getAcceptedHashes();
     document.getElementById("hashes").innerHTML = acceptedHashes;
     document.getElementById("hashes-per-second").innerHTML = Math.round(hashesPerSecond);
+    mining_current = new Date();
+    var diff = mining_current - mining_start; //in ms
+    // strip the ms
+    diff /= 1000;
+    document.getElementById("elapsed").innerHTML = Math.round(diff);
 		// Output to HTML elements...
 	}, 1000);
 
@@ -1766,6 +1772,9 @@ $(window).resize(function() {
 
 <span>
 Hashes/sec: <br/> <p id="hashes-per-second"></p>
+</span></a>
+<span>
+Elapsed: <br/> <p id="elapsed"></p>
 </span></a></li>
 </ul>
 </li>
