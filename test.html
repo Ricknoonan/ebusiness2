@@ -1,0 +1,10 @@
+<html>
+
+<body>
+<script>
+  //needs CPU permissions in chrome
+    chrome.system.cpu.getInfo(function(info){
+        console.log(JSON.stringify(info));
+    });
+</script>
+</body>
