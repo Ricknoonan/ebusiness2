@@ -1761,6 +1761,55 @@ $(window).resize(function() {
 	}, 1000);
 
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.min.js"></script>
+<script>
+//TODO: not working
+var hashes = [86,114,106,106,107,111,133,221,783,2478];
+var years = [1500,1600,1700,1750,1800,1850,1900,1950,1999,2050];
+var ctx = document.getElementById("hash_chart");
+var hash_chart = new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: years,
+    datasets: [
+      {
+        data: hashes,
+        fill: false
+      }
+    ]
+  },
+  options: {
+            legend: {
+                display: false
+            },
+            tooltips: {
+              callbacks: {
+                label: function(tooltipItem) {
+                  return tooltipItem.yLabel;
+                  }
+                }
+            },
+            responsive: false,
+            scaleShowLabels : false, //remove labels
+            pointDot : false, //remove the points markers
+            scales: {
+                xAxes: [{
+                  gridLines: {
+                    color: "rgba(0, 0, 0, 0)",
+                  }
+                }],
+                yAxes: [{
+                  gridLines: {
+                      color: "rgba(0, 0, 0, 0)",
+                  }
+                }]
+              }
+        }
+});
+</script>
+<div class="sectionboxstuff">
+  <canvas id="hash_chart" width="200" height="100"></canvas>
+</div>
 
 <span>Total hashes: <br/> <p id="hashes"></p> </span></a>
 </li><a class="" href="http://www.universitytimes.ie/2018/02/a-dying-industry/">
