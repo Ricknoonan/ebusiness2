@@ -1,10 +1,8 @@
 <?php
 	$name = $_POST['name'];
 	$visitor_email = $_POST['email'];
-	$phNumber = $_POST['phone_number'];
+	$phNumber = $_POST['phone'];
 	$message = $_POST['message'];
-	
-	$email_from = 'Browserbro.tk';
 	
 	$email_subject = "New Form Submission";
 	
@@ -14,13 +12,11 @@
 							"User Message: $message.\n";
 							
 	
-	$to = jamescox1997@hotmail.com;
+	$mailTo = jamescox1997@hotmail.com;
 	
-	$headers = "From : $email_from \r\n";
+	$headers = "From: ".$visitor_email ;
 	
-	$headers = "Reply-To: $visitor_email \r\n";
-	
-	mail($to, $email_subject, $email_body, $headers);
+	mail($mailTo, $email_subject, $email_body, $headers);
 	
 	header("Location: index.html");
 	
